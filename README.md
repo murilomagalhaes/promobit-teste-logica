@@ -1,14 +1,17 @@
 
 # Murilo Magalhães Barreto
+## Contatos
 - [LinkedIn](http://linkedin.com/in/magalhaesmurilo)
-- murilomagalhaes@outlook.com
+- [murilomagalhaes@outlook.com](maioto:murilomagalhaes@outlook.com)
 
 <hr>
 
 # Teste Promobit
 
 📢 Aviso: Não dê um fork neste repositório. Clone o repositório e suba em seu GitHub, envie o link do seu repositório para [laisa.souza@promobit.com.br](mailto:laisa.souza@promobit.com.br)
+
 - [Murilo Magalhães Barreto](#murilo-magalhães-barreto)
+  - [Contatos](#contatos)
 - [Teste Promobit](#teste-promobit)
   - [Descrição](#descrição)
   - [Como funciona este repositório?](#como-funciona-este-repositório)
