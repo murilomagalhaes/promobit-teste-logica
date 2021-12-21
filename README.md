@@ -2,7 +2,7 @@
 # Murilo Magalhães Barreto
 ## Contatos
 - [LinkedIn](http://linkedin.com/in/magalhaesmurilo)
-- [murilomagalhaes@outlook.com](maioto:murilomagalhaes@outlook.com)
+- [murilomagalhaes@outlook.com](mailto:murilomagalhaes@outlook.com)
 
 <hr>
 
