@@ -1,90 +1,73 @@
 
-# Murilo Magalhães Barreto
-## Contatos
-- [LinkedIn](http://linkedin.com/in/magalhaesmurilo)
-- [murilomagalhaes@outlook.com](mailto:murilomagalhaes@outlook.com)
+#Descrição
+Projeto criado como solução do teste no processo seletivo para Dev PHP Jr na Promobit.
 
+Repo Original: [teste-logica](https://github.com/Promobit/teste-logica)
+
+## Resolução do desafio
+
+```php
+<?php
+
+namespace App;
+
+// Murilo M. Tuesday, 2021-12-21.
+
+class ProductStructure
+{
+    const products = [
+        "preto-PP",
+        "preto-M",
+        "preto-G",
+        "preto-GG",
+        "preto-GG",
+        "branco-PP",
+        "branco-G",
+        "vermelho-M",
+        "azul-XG",
+        "azul-XG",
+        "azul-XG",
+        "azul-P"
+    ];
+
+    /**
+     * Returns an array with the product quantity for each size by color.
+     * @param array $products Products array with each item formated like: "color-size"
+     * @param string $separator The separator used between the item's color and size.     
+     * @return array
+     */
+    private function getProductsQtyByColorAndSize(array $products, string $separator = "-"): array
+    {
+        $products_qty = [];
+
+        foreach ($products as $product) {
+
+            // Gets product info (Color and Size)
+            $product_info = explode($separator, $product);
+            $color = $product_info[0];
+            $size = $product_info[1];
+
+            // If the qty for the size variant already exists, increments it. Otherwise creates a new entry.
+            if (!empty($products_qty[$color][$size])) {
+                $products_qty[$color][$size]++;
+            } else {
+                $products_qty[$color][$size] = 1;
+            }
+        }
+
+        return $products_qty;
+    }
+
+    public function make(): array
+    {
+        return $this->getProductsQtyByColorAndSize(self::products);
+    }
+}
+
+```
 <hr>
 
-# Teste Promobit
 
-📢 Aviso: Não dê um fork neste repositório. Clone o repositório e suba em seu GitHub, envie o link do seu repositório para [laisa.souza@promobit.com.br](mailto:laisa.souza@promobit.com.br)
-
-- [Murilo Magalhães Barreto](#murilo-magalhães-barreto)
-  - [Contatos](#contatos)
-- [Teste Promobit](#teste-promobit)
-  - [Descrição](#descrição)
-  - [Como funciona este repositório?](#como-funciona-este-repositório)
-    - [Observação:](#observação)
-  - [Problema](#problema)
-  - [Como testar?](#como-testar)
-
-## Descrição
-Esse repositório possui o teste da Promobit para avaliar as habilidades de lógica do candidato em questão.
-
-## Como funciona este repositório?
-No repositório em questão, existe um teste criado com PHPUnit que deve ser rodado para verificar se a estrutura condiz com o que buscamos. Seu código deve ser colocado no arquivo [ProductStructure.php](./src/ProductStructure.php). Sinta-se livre para estruturar da forma que preferir, desde que o retorno seja criado de acordo com resultado que esperamos na seção seguinte, levando em consideração que no seu código o retorno deve ser dinámico, baseado no array inicial fornecido no arquivo em questão.
-
-### Observação: 
-Não mexer nos testes, mexa nas implementações em [ProductStructure.php](./src/ProductStructure.php) se houver alteração nos testes você será desclassificado, na dúvida entre em contato com o email informado.
-
-## Problema
-Nosso cliente cadastrou na plataforma as variantes dos produtos sem especificação. E pediu para criarmos um seletor de variantes na página de produto. Mas a seguinte estrutura de dados não funciona bem para o desenvolvimento de um seletor de variantes.
-
-```php
-[
-    'azul-XG',
-    'branco-PP',
-    'azul-XG',
-    'preto-PP',
-    'preto-M',
-    'branco-G',
-    'preto-G',
-    'vermelho-M',
-    'preto-GG',
-    'azul-P',
-    'preto-GG', 
-    'azul-XG', 
-]
-```
-
-Precisamos que essa estrutura seja convertida para o seguinte formato.
-
-```php
-[
-    'preto' =>  [
-        'PP' => 1,
-        'M' => 1,
-        'G' => 1,
-        'GG' => 2
-    ],
-    'branco' => [
-        'PP'=> 1,
-        'G' => 1
-    ],
-    'vermelho' => [
-        'M' => 1
-    ],
-    'azul' => [
-        'XG' => 3,
-        'P' => 1
-    ]
-]
-```
-
-## Como testar?
-Para testar seu código, basta apenas rodar o seguinte comando:
-```bash
-php vendor/bin/phpunit test --colors
-```
-
-O resultado deve ser semelhante ao seguinte:
-```bash
-PHPUnit 8.5.21 by Sebastian Bergmann and contributors.
-
-.                                                                   1 / 1 (100%)
-
-Time: 26 ms, Memory: 4.00 MB
-
-OK (1 test, 1 assertion)
-```
+# Contatos
+- [LinkedIn](http://linkedin.com/in/magalhaesmurilo)
+- [murilomagalhaes@outlook.com](mailto:murilomagalhaes@outlook.com)
